@@ -3,14 +3,10 @@ package com.example.mediaplayer.android
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.*
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
-import com.example.mediaplayer.Greeting
-import com.example.mediaplayer.android.navigation.bottom_nav_graph.SetUpBottomNavGraph
 import com.example.mediaplayer.android.navigation.nav_graph.SetUpNavGraph
 
 class MainActivity : ComponentActivity() {
@@ -20,8 +16,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyApplicationTheme {
                 SetUpNavGraph()
-                //SetUpBottomNavGraph()
-
             }
         }
     }
