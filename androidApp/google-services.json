@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "985855553568",
+    "project_id": "mediaplayer-9824a",
+    "storage_bucket": "mediaplayer-9824a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985855553568:android:7941d0e54caf8e4bac8c45",
+        "android_client_info": {
+          "package_name": "com.example.mediaplayer.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985855553568-t0kiqhvojlkq7e87743abakg2oo5ge3f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqOsT9F15lVGXDQLv_8pc2lh2mQGqM8zs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "985855553568-t0kiqhvojlkq7e87743abakg2oo5ge3f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "985855553568-50sobcu2usm9805d6bi4pge8gkmu8h6s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mediaplayer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
