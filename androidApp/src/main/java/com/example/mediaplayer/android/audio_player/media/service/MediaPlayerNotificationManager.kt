@@ -30,7 +30,7 @@ internal class MediaPlayerNotificationManager(
         )
 
         with(builder) {
-            setMediaDescriptionAdapter()
+            setMediaDescriptionAdapter(DescriptionAdapter(mediaController))
             setNotificationListener(notificationListener)
             setChannelNameResourceId(R.string.notification_channel)
             setChannelDescriptionResourceId(R.string.notification_channel_description)
