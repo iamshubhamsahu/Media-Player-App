@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -40,8 +42,9 @@ android {
 }
 
 dependencies {
-    implementation("com.google.firebase:firebase-auth-ktx:21.1.0")
     val nav_version = "2.5.3"
+
+    implementation("com.google.firebase:firebase-auth-ktx:21.1.0")
 
     implementation(project(":shared"))
     implementation("androidx.compose.ui:ui:1.4.0")
@@ -54,13 +57,13 @@ dependencies {
     implementation("io.coil-kt:coil-compose:1.4.0")
 
     //for PickVisualMedia contract
-    implementation ("androidx.activity:activity-ktx:1.7.0")
+    implementation("androidx.activity:activity-ktx:1.7.0")
 
     //for rememberImagePainter and image loading functionality
     implementation("io.coil-kt:coil-compose:2.2.2")
 
     //for tap target view
-    implementation ("com.getkeepsafe.taptargetview:taptargetview:1.13.3")
+    implementation("com.getkeepsafe.taptargetview:taptargetview:1.13.3")
 
     // Java language implementation
     implementation("androidx.navigation:navigation-fragment:$nav_version")
@@ -86,7 +89,7 @@ dependencies {
     implementation("com.google.android.gms:play-services-maps:18.1.0")
 
     // Optionally, you can include the Compose utils library for Clustering, etc.
-    implementation ("com.google.maps.android:maps-compose-utils:2.11.2")
+    implementation("com.google.maps.android:maps-compose-utils:2.11.2")
 
     // Optionally, you can include the widgets library for ScaleBar, etc.
     implementation("com.google.maps.android:maps-compose-widgets:2.11.2")
@@ -96,5 +99,27 @@ dependencies {
     //Firebase
     implementation("com.google.firebase:firebase-bom:31.5.0")
     implementation("com.google.firebase:firebase-analytics-ktx:21.2.2")
+
+
+    //Audio player
+    // compose viewmodel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0")
+    // extended icons
+    implementation("androidx.compose.material:material-icons-extended:1.0.1")
+    // media player
+    implementation("androidx.core:core:1.7.0")
+    implementation("androidx.media:media:1.5.0")
+    implementation("com.google.android.exoplayer:exoplayer:2.17.0")
+    implementation("com.google.android.exoplayer:extension-mediasession:2.17.0")
+
+    // Hilt - dependency injection
+    implementation("com.google.dagger:hilt-android:2.37")
+    implementation("com.google.dagger:hilt-compiler:2.37")
+    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
+    implementation("androidx.hilt:hilt-compiler:1.0.0")
+
+    // coroutine
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0")
 
 }

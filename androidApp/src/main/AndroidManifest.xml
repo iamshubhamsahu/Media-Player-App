@@ -17,5 +17,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".audio_player.media.service.MediaPlayerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="andoid.media.browser.MediaBrowserService"/>
+            </intent-filter>
+        </service>
     </application>
 </manifest> 

@@ -79,8 +79,7 @@ fun SignUp(navController: NavController) {
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        Button(onClick = {
-        //    navController.navigate("")
+        Button(onClick = { navController.navigate("video_screen")
 
         }) {
             Text(text = "Next Step")
