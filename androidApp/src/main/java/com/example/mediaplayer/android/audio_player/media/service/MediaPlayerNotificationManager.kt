@@ -1,16 +1,15 @@
 package com.example.mediaplayer.android.audio_player.media.service
 
 
-import androidx.browser.customtabs.CustomTabsSessionToken
-import com.example.mediaplayer.android.audio_player.media.constants.K
-import com.google.android.exoplayer2.ui.PlayerNotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.graphics.Bitmap
 import android.support.v4.media.session.MediaControllerCompat
 import android.support.v4.media.session.MediaSessionCompat
 import com.example.mediaplayer.android.R
+import com.example.mediaplayer.android.audio_player.media.constants.K
 import com.google.android.exoplayer2.Player
+import com.google.android.exoplayer2.ui.PlayerNotificationManager
 
 
 internal class MediaPlayerNotificationManager(
