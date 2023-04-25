@@ -6,9 +6,7 @@ import android.support.v4.media.MediaBrowserCompat
 import android.support.v4.media.MediaMetadataCompat
 import android.support.v4.media.session.MediaControllerCompat
 import android.support.v4.media.session.PlaybackStateCompat
-import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
-import androidx.media.MediaBrowserServiceCompat
 import com.example.mediaplayer.android.audio_player.data.model.Audio
 import com.example.mediaplayer.android.audio_player.media.constants.K
 import dagger.hilt.android.qualifiers.ApplicationContext
