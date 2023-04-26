@@ -20,7 +20,10 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltAndroidApp
-class AudioViewModel @Inject constructor(private val repository: AudioRepository, serviceConnection: MediaPlayerServiceConnection) : ViewModel() {
+class AudioViewModel @Inject constructor(
+    private val repository: AudioRepository,
+    serviceConnection: MediaPlayerServiceConnection
+) : ViewModel() {
 
     var audioList = mutableStateListOf<Audio>()
     val currentPlayingAudio = serviceConnection.currentPlayingAudio
@@ -32,7 +35,7 @@ class AudioViewModel @Inject constructor(private val repository: AudioRepository
     val isAudioPlaying: Boolean
         get() = playbackState.value?.isPlaying == true
 
-    private val subscriptionCallback = object :MediaBrowserCompat.SubscriptionCallback() {
+    private val subscriptionCallback = object : MediaBrowserCompat.SubscriptionCallback() {
         override fun onChildrenLoaded(
             parentId: String,
             children: MutableList<MediaBrowserCompat.MediaItem>
@@ -42,10 +45,11 @@ class AudioViewModel @Inject constructor(private val repository: AudioRepository
     }
 
     private val serviceConnection = serviceConnection.also {
-
+updatePlayback()
     }
-
-    val currentDuration = MediaPlayerService.currentDuration
+//Fixme: 2
+    val currentDuration : Long
+    get() = MediaPlayerService.currentDuration
 
     var currentAudioProgress = mutableStateOf(0f)
 

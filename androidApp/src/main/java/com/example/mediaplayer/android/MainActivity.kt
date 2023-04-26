@@ -21,6 +21,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.mediaplayer.android.audio_player.ui.audio.AudioViewModel
+import com.example.mediaplayer.android.audio_player.ui.audio.HomeScreen
 import com.example.mediaplayer.android.navigation.nav_graph.SetUpNavGraph
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.rememberPermissionState
@@ -60,6 +61,22 @@ class MainActivity : ComponentActivity() {
                             modelClass = AudioViewModel::class.java
                         )
                         val audioList = audioViewModel.audioList
+                        HomeScreen(
+                            progress = audioViewModel.currentAudioProgress.value,
+                            onProgressChange = { audioViewModel.seekTo(it) },
+                            isAudioPlaying = audioViewModel.isAudioPlaying,
+                            audioList = audioList,
+                            currentPlayingAudio = audioViewModel.currentPlayingAudio.value,
+                            onStart = {
+                                      audioViewModel.playAudio(it)
+                            },
+                            onItemClick = {
+                                audioViewModel.playAudio(it)
+                            },
+                            onNext = {
+                                audioViewModel.skipToNext()
+                            }
+                        )
                     } else {
                         Box(contentAlignment = Alignment.Center) {
                             Text(text = "Grand permission first to use this app")

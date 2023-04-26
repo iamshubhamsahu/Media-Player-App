@@ -9,6 +9,7 @@
 
 
     <application
+        android:name=".audio_player.AudioApplication"
         android:allowBackup="false"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
