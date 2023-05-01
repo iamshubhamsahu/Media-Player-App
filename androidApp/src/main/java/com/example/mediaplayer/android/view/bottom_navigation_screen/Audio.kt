@@ -15,13 +15,10 @@ fun Audio() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Color.Red),
+            .background(color = Color.White),
         contentAlignment = Alignment.Center
     ) {
-        Text(
-            text = "Audio",
-            fontSize = MaterialTheme.typography.h3.fontSize,
-            color = Color.White,
-        )
+
+
     }
 }
