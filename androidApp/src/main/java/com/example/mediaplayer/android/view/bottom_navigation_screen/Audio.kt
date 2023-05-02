@@ -2,8 +2,6 @@ package com.example.mediaplayer.android.view.bottom_navigation_screen
 
 import android.media.MediaPlayer
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Button

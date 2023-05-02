@@ -97,4 +97,8 @@ dependencies {
     implementation("com.google.firebase:firebase-bom:31.5.0")
     implementation("com.google.firebase:firebase-analytics-ktx:21.2.2")
 
+    //Permission
+    implementation ("com.google.accompanist:accompanist-permissions:0.31.1-alpha")
+
+
 }
